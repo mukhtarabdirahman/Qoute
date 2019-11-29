@@ -1,0 +1,12 @@
+<div>
+    <h1>Qoute</h1>
+    <p>My qoute for today is {{qoute}}</p>
+  <ul>
+    <div *ngFor='let qoute of qoutes; let i = index'>
+      <li appStrikethrough>{{qoute.name}} due on {{qoute.completeDate|date|uppercase}}</li>
+      <button (click)='toggleDetails(i)'>Toggle Details</button>
+      <app-qoute-details *ngIf='qoute.showDescription' [qoute]='qoute' (isComplete) = 'deleteQoute($event,i)'></app-qoute-details>
+    </div>
+
+  </ul>
+  </div>
