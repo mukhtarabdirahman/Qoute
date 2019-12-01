@@ -2,5 +2,7 @@
 <p></p>
 <p class="author capitalize mt-3">Author: {{ qoute.author }}</p>
 <p class="upvotes capitalize ">Upvotes: {{ qoute.upvotes }}</p>
+<button type="button" class="btn btn-outline-success">Upvote</button>
 <p class="downvotes capitalize">Downvotes: {{ qoute.downvotes }}</p>
-<button (click)= 'qouteDelete(true)' class="btn btn-outline-danger">Delete Qoute</button>
+<button type="button" class="btn btn-outline-warning">Downvote</button><br>
+<button (click)= 'qouteDelete(true)' class="btn btn-outline-danger mt-3">Delete Qoute</button>
