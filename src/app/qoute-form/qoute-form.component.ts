@@ -11,6 +11,7 @@ export class QouteFormComponent implements OnInit {
 
   submitQoutes(){
 this.addQoutes.emit(this.newQoutes);
+
   }
   constructor() { }
 
