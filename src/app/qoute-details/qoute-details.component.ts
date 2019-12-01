@@ -19,5 +19,8 @@ export class QouteDetailsComponent implements OnInit {
   addUpvotes(){
     return this.qoute.upvotes += 1;
   }
+  addDownvotes(){
+    return this.qoute.downvotes += 1;
+  }
  
 }
