@@ -16,5 +16,8 @@ export class QouteDetailsComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  addUpvotes(){
+    return this.qoute.upvotes += 1;
+  }
+ 
 }
