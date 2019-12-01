@@ -1,10 +1,16 @@
 # Qoutes
+- Is application where users can create quotes.
+# Description
 - Is application where users can create quotes and have those quotes voted on whether they are terrible or are inspirational.
 
 ## Technologies Used
 -Angular 
-
-
+## Behaviour Driven Development
+- This input where a user can create a qoute and it can be voted terribly or inspirational
+-Input Author name
+-Input Sumbited By
+-Input qoute
+-Press add
 ## License
 MIT Copyright (c) 2019 Ahmed Mukhtar
 
