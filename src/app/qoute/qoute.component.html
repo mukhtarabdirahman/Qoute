@@ -1,12 +1,20 @@
-<div>
+<div class="container">
     <h1>Qoute</h1>
-    <p>My qoute for today is {{qoute}}</p>
-  <ul>
+   <p>My qoute for today is {{qoute}}</p>
+   <hr>
+    <div class="row">
+    <div class="col-md-6">
     <div *ngFor='let qoute of qoutes; let i = index'>
-      <li appStrikethrough>{{qoute.name}} due on {{qoute.completeDate|date|uppercase}}</li>
-      <button (click)='toggleDetails(i)'>Toggle Details</button>
+     <h6 id={{i}} >{{qoute.name}} due on {{qoute.completeDate|date|uppercase}}</h6>
+      <button (click)='toggleDetails(i)' class="btn btn-primary">Toggle Details</button>
+    <!-- </div> 
+    <div>  -->
       <app-qoute-details *ngIf='qoute.showDescription' [qoute]='qoute' (isComplete) = 'deleteQoute($event,i)'></app-qoute-details>
     </div>
+    </div>
 
-  </ul>
+  <div class="col-md-6">
+    <app-qoute-form (addQoutes)="addNewQoutes($event)"></app-qoute-form>
   </div>
+  </div>
+</div>

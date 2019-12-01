@@ -1,23 +1,31 @@
 <div class="container-fluid">
-    <h2 class="text-center">Create a new Qoute</h2>
+    <h2 class="text-center">Create a new Qoutes</h2>
     <hr>
-    <form>
+    <form (ngSubmit)='submitQoutes()' #qouteForm='ngForm'>
         <div class="form-group">
   
             <label for="name">Name</label>
-            <input type="text" required class="form-control" id="name">
-  
+            <input type="text" class="form-control" id="name" [(ngModel)]="newQoutes.name" name="name" #name='ngModel' required>
+            Display {{newQoutes.name}}
+            <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+                <p>Name is required</p>
+              </div>
         </div>
         <div class="form-group">
   
-            <label for="description">Description</label>
-            <textarea class="form-control" id="description" rows="4" required></textarea>
-  
+            <label for="qoute">Qoute</label>
+            <textarea class="form-control" id="qoute" rows="4" [(ngModel)]="newQoutes.qoute"  name="qoute" #qoute='ngModel' required></textarea>
+            <div [hidden]="qoute.valid || qoute.pristine" class="alert alert-danger">
+                <p>Qoute is required</p>
+              </div>
         </div>
         <div class="form-group">
             <label for="complete">Completion</label>
-            <input type='date' id="complete" required>
-  
+            <input type='date' id="complete" [(ngModel)]="newQoutes.completeDate" name="completeDate" #completeDate="ngModel"required>
+            <div [hidden]="completeDate.valid || completeDate.pristine" class="alert alert-danger">
+                <p>Date is required</p>
+            </div>
         </div>
+        <button type="submit" class="btn btn-success">Add Qoute</button>
     </form>
   </div>

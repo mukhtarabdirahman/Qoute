@@ -9,7 +9,7 @@ export class QouteDetailsComponent implements OnInit {
   @Input() qoute: Qoutes;
   @Output() isComplete = new EventEmitter<boolean>();
 
-  goalDelete(complete:boolean){
+  qouteDelete(complete:boolean){
     this.isComplete.emit(complete);
   }
   constructor() { }
