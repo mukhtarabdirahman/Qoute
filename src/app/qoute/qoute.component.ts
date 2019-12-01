@@ -7,9 +7,9 @@ import { Qoutes } from '../qoutes';
 })
 export class QouteComponent implements OnInit {
   qoutes:Qoutes[] = [
-    new Qoutes(1,'Once you choose hope, anything’s possible.','Ahmed', new Date(),),
-    new Qoutes(2,'I want to be the reason you look at your phone when you wake up in the morning and smile','Mukhtar', new Date(),),
-    new Qoutes(3,'I call her Google, Because she got everything I am searcing for.','Abdirahman', new Date(),),
+    new Qoutes(1,'Once you choose hope, anything’s possible.','Ahmed', new Date(2013, 10, 5)),
+    new Qoutes(2,'I want to be the reason you look at your phone when you wake up in the morning and smile','Mukhtar', new Date(2014,2,1)),
+    new Qoutes(3,'I call her Google, Because she got everything I am searcing for.','Abdirahman', new Date(2018,10,5)),
   ];
   toggleDetails(index){
     this.qoutes[index].showDescription = !this.qoutes[index].showDescription;
