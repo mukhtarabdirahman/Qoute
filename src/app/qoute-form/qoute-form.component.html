@@ -2,9 +2,17 @@
     <h2 class="text-center">Create a new Qoutes</h2>
     <hr>
     <form (ngSubmit)='submitQoutes()' #qouteForm='ngForm'>
+            <div class="form-group">
+  
+                    <label for="submited_by">Your Name</label>
+                    <input type="text" class="form-control" id="submited_by" rows="4" [(ngModel)]="newQoutes.submited_by"  name="submited_by" #submited_by='ngModel' required>
+                    <div [hidden]="submited_by.valid || submited_by.pristine" class="alert alert-danger">
+                        <p>Qoute is required</p>
+                      </div>
+                </div>
         <div class="form-group">
   
-            <label for="author">Name</label>
+            <label for="author">Author</label>
             <input type="text" class="form-control" id="author" [(ngModel)]="newQoutes.author" name="author" #author='ngModel' required>
             Display {{newQoutes.author}}
             <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
