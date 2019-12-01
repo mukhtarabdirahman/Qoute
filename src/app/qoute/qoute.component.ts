@@ -7,16 +7,16 @@ import { Qoutes } from '../qoutes';
 })
 export class QouteComponent implements OnInit {
   qoutes:Qoutes[] = [
-    new Qoutes(1,'Once you choose hope, anything’s possible.','Ahmed', new Date(2013, 10, 5)),
-    new Qoutes(2,'I want to be the reason you look at your phone when you wake up in the morning and smile','Mukhtar', new Date(2014,2,1)),
-    new Qoutes(3,'I call her Google, Because she got everything I am searcing for.','Abdirahman', new Date(2018,10,5)),
+    new Qoutes(1,'trigga', 'Once you choose hope, anything’s possible.',new Date(2014,5,2),0,0,'mukhtar'),
+    new Qoutes(2,'ahmed', 'I want to be the reason you look at your phone when you wake up in the morning and smile', new Date(2016,6,3),0,0,'james'),
+    new Qoutes(3,'david', 'I call her Google, Because she got everything I am searcing for.', new Date(2018,10,5),0,0,'Abdirahman'),
   ];
   toggleDetails(index){
     this.qoutes[index].showDescription = !this.qoutes[index].showDescription;
   }
   deleteQoute(isComplete, index){
     if (isComplete) {
-      let toDelete = confirm(`Are you sure you want to delete ${this.qoutes[index].name}?`)
+      let toDelete = confirm(`Are you sure you want to delete ${this.qoutes[index].submited_by}?`)
 
       if (toDelete){
         this.qoutes.splice(index,1)
